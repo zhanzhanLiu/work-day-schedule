@@ -50,7 +50,11 @@ function timeSlot() {
 
         // Add buttons to Column 3
         var saveButton = $('<button>')
-        saveButton.addClass("bi bi-save2-fill").appendTo(timeCol3);
+        var saveIcon = $("<i>"); 
+        saveButton.addClass("btn btn-primary btn-control")
+        saveIcon.addClass("bi bi-save-fill").appendTo(saveButton)
+        $(saveIcon).attr("color", "blue");
+        saveButton.appendTo(timeCol3);
         timeCol3.addClass("border rounded-right bg-primary").appendTo(timeRow);
     }
     
